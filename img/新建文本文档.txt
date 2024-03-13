@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+int n,m;
+vector<int> vec;
+int main(){
+    cin>>n>>m;
+    for(int i=1;i<=n;i++) vec.push_back(i);
+    while(vec.size()>m){
+        cout<<vec[m-1]<<" "<<vec[m]<<" ";
+        vec.erase(vec.begin()+m-1,vec.begin()+m+1);
+        m=m+2;
+    }
+    while(vec.size()<=m){
+        m=3;
+        cout<<vec[m-1]<<" "<<vec[m]<<" ";
+        vec.erase(vec.begin()+m-1,vec.begin()+m+1);
+        m=m+2;
+    }
+    //for(int i=0;i<vec.size();i++) cout<<vec[i]<<" ";
+}
